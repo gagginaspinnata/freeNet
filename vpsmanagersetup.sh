@@ -19,8 +19,9 @@ function INSTALL_BIN{
 	cp bin/changedate /bin/changedate
 	chmod +x /bin/changedate
 
-	# wget http://phreaker56.obex.pw/vpsmanager/scripts/remover.sh -O /bin/remover
-	# chmod +x /bin/remover
+	cp bin/deleteuser /bin/deleteuser
+	chmod +x /bin/deleteuser
+	
 	# wget http://phreaker56.obex.pw/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
 	# chmod +x /bin/sshlimiter
 	# wget http://phreaker56.obex.pw/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
