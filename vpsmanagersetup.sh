@@ -169,7 +169,7 @@ tput setaf 7 ; tput setab 4 ; tput bold ; echo "Squid Proxy Installed and runnin
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "OpenSSH running on ports 22 e 443. First try 443 on your client." ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "User management scripts installed" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Read the documentation to avoid questions and problems.!" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "To see the available commands use the command: ajuda" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "To see the available commands use the command: vpshelp" ; tput sgr0
 echo ""
 if [[ "$optiondb" = '2' ]]; then
 	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > /root/usuarios.db
