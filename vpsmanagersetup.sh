@@ -1,6 +1,7 @@
 #!/bin/bash
 
-function INSTALL_BIN{
+ INSTALL_BIN(){
+
 	cp bin/addhost /bin/addhost
 	chmod +x /bin/addhost
 
@@ -123,7 +124,7 @@ then
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	INSTALL_BIN
+	INSTALL_BIN()
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
 		service squid3 reload > /dev/null
@@ -149,7 +150,7 @@ then
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	INSTALL_BIN
+	INSTALL_BIN()
 	if [ ! -f "/etc/init.d/squid" ]
 	then
 		service squid reload > /dev/null
