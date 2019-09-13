@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function INSTALL_BIN{
-wget http://phreaker56.obex.pw/vpsmanager/scripts/addhost.sh -O /bin/addhost
+wget "http://phreaker56.obex.pw/vpsmanager/scripts/addhost.sh" -O /bin/addhost
 chmod +x /bin/addhost
 wget http://phreaker56.obex.pw/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha
 chmod +x /bin/alterarsenha
