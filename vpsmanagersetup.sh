@@ -21,15 +21,18 @@ function INSTALL_BIN{
 
 	cp bin/deleteuser /bin/deleteuser
 	chmod +x /bin/deleteuser
-	
-	# wget http://phreaker56.obex.pw/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
-	# chmod +x /bin/sshlimiter
-	# wget http://phreaker56.obex.pw/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
-	# chmod +x /bin/alterarlimite
+
+	cp bin/sshlimiter /bin/sshlimiter
+	chmod +x /bin/sshlimiter
+
+	cp bin/changelimit /bin/changelimit
+	chmod +x /bin/changelimit
+
 	cp bin/vpshelp /bin/vpshelp
 	chmod +x /bin/vpshelp
-	# wget http://phreaker56.obex.pw/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
-	# chmod +x /bin/sshmonitor
+
+	cp bin/sshmonitor /bin/sshmonitor
+	chmod +x /bin/sshmonitor
 }
 
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "VPS Manager 2.0.1" ; tput sgr0
