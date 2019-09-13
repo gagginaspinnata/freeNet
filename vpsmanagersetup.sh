@@ -1,11 +1,12 @@
 #!/bin/bash
 
 function INSTALL_BIN{
-	# wget http://phreaker56.obex.pw/vpsmanager/scripts/addhost.sh -O /bin/addhost
-	# chmod +x /bin/addhost
-	# wget http://phreaker56.obex.pw/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha
-	# chmod +x /bin/alterarsenha
-	# wget http://phreaker56.obex.pw/vpsmanager/scripts/criarusuario2.sh -O /bin/criarusuario
+	cp bin/addhost /bin/addhost
+	chmod +x /bin/addhost
+	cp bin/changeuserpassword /bin/changeuserpassword
+	chmod +x /bin/changeuserpassword
+	cp bin/newuser /bin/newuser
+	chmod +x /bin/newuser
 	# chmod +x /bin/criarusuario
 	# wget http://phreaker56.obex.pw/vpsmanager/scripts/delhost.sh -O /bin/delhost
 	# chmod +x /bin/delhost
