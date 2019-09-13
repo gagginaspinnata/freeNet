@@ -3,13 +3,16 @@
 function INSTALL_BIN{
 	cp bin/addhost /bin/addhost
 	chmod +x /bin/addhost
+
 	cp bin/changeuserpassword /bin/changeuserpassword
 	chmod +x /bin/changeuserpassword
+
 	cp bin/newuser /bin/newuser
 	chmod +x /bin/newuser
-	# chmod +x /bin/criarusuario
-	# wget http://phreaker56.obex.pw/vpsmanager/scripts/delhost.sh -O /bin/delhost
-	# chmod +x /bin/delhost
+
+	cp bin/deletehost /bin/deletehost
+	chmod +x /bin/deletehost
+
 	# wget http://phreaker56.obex.pw/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
 	# chmod +x /bin/expcleaner
 	# wget http://phreaker56.obex.pw/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
