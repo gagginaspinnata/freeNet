@@ -53,7 +53,7 @@ echo "b. Create, manage, and remove an unlimited number of users through this se
 echo ""
 tput setaf 3 ; tput bold ; read -n 1 -s -p "Press any key to continue ..." ; echo "" ; echo "" ; tput sgr0
 echo "2. You can't:"
-echo "a. Edit, modify, share or redistribute (for free or commercially")
+echo "a. Edit, modify, share or redistribute (for free or commercially)"
 echo "this script set without developer permission."
 echo "b. Modify or edit the script set to make you look like the script developer."
 echo ""
