@@ -1,28 +1,28 @@
 #!/bin/bash
 
 function INSTALL_BIN{
-wget "http://phreaker56.obex.pw/vpsmanager/scripts/addhost.sh" -O /bin/addhost
-chmod +x /bin/addhost
-wget http://phreaker56.obex.pw/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha
-chmod +x /bin/alterarsenha
-wget http://phreaker56.obex.pw/vpsmanager/scripts/criarusuario2.sh -O /bin/criarusuario
-chmod +x /bin/criarusuario
-wget http://phreaker56.obex.pw/vpsmanager/scripts/delhost.sh -O /bin/delhost
-chmod +x /bin/delhost
-wget http://phreaker56.obex.pw/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
-chmod +x /bin/expcleaner
-wget http://phreaker56.obex.pw/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
-chmod +x /bin/mudardata
-wget http://phreaker56.obex.pw/vpsmanager/scripts/remover.sh -O /bin/remover
-chmod +x /bin/remover
-wget http://phreaker56.obex.pw/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
-chmod +x /bin/sshlimiter
-wget http://phreaker56.obex.pw/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
-chmod +x /bin/alterarlimite
-wget http://phreaker56.obex.pw/vpsmanager/scripts/ajuda.sh -O /bin/ajuda
-chmod +x /bin/ajuda
-wget http://phreaker56.obex.pw/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
-chmod +x /bin/sshmonitor
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/addhost.sh -O /bin/addhost
+	# chmod +x /bin/addhost
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha
+	# chmod +x /bin/alterarsenha
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/criarusuario2.sh -O /bin/criarusuario
+	# chmod +x /bin/criarusuario
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/delhost.sh -O /bin/delhost
+	# chmod +x /bin/delhost
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
+	# chmod +x /bin/expcleaner
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
+	# chmod +x /bin/mudardata
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/remover.sh -O /bin/remover
+	# chmod +x /bin/remover
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	# chmod +x /bin/sshlimiter
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
+	# chmod +x /bin/alterarlimite
+	cp bin/vpshelp /bin/vpshelp
+	chmod +x /bin/vpshelp
+	# wget http://phreaker56.obex.pw/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	# chmod +x /bin/sshmonitor
 }
 
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "VPS Manager 2.0.1" ; tput sgr0
