@@ -1,13 +1,11 @@
-## Requirements
-
-- wget
-- git
-
-## One line installer
+## How to install
 
 `curl -s https://raw.githubusercontent.com/gagginaspinnata/freeNet/master/install.sh | bash`
 
-_It requires curl_
+First Clone the repo
 
-`apt-get update; apt-get install git; git clone https://github.com/gagginaspinnata/freeNet.git;
-`
+`apt-get update; apt-get install git; git clone https://github.com/gagginaspinnata/freeNet.git;`
+
+Cd into the directory `cd freeNet` and run `bash vpsmanagersetup.sh`
+
+To view the new installed commands run `vpshelp`
