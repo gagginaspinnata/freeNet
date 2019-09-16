@@ -2,42 +2,45 @@
 
  INSTALL_BIN(){
 
-	 echo '******* INSTALLING BIN'
+	ls $PWD/bin | while read var; do cp $PWD/bin/$var /bin/$var; chmod +x /bin/$var; done
 	 
-	cp $PWD/bin/addhost /bin/addhost
-	chmod +x /bin/addhost
+	# cp $PWD/bin/addhost /bin/addhost
+	# chmod +x /bin/addhost
 
-	cp $PWD/bin/changeuserpassword /bin/changeuserpassword
-	chmod +x /bin/changeuserpassword
+	# cp $PWD/bin/changeuserpassword /bin/changeuserpassword
+	# chmod +x /bin/changeuserpassword
 
-	cp $PWD/bin/newuser /bin/newuser
-	chmod +x /bin/newuser
+	# cp $PWD/bin/newuser /bin/newuser
+	# chmod +x /bin/newuser
 
-	cp $PWD/bin/deletehost /bin/deletehost
-	chmod +x /bin/deletehost
+	# cp $PWD/bin/deletehost /bin/deletehost
+	# chmod +x /bin/deletehost
 
-	cp $PWD/bin/expcleaner /bin/expcleaner
-	chmod +x /bin/expcleaner
+	# cp $PWD/bin/expcleaner /bin/expcleaner
+	# chmod +x /bin/expcleaner
 
-	cp $PWD/bin/changedate /bin/changedate
-	chmod +x /bin/changedate
+	# cp $PWD/bin/changedate /bin/changedate
+	# chmod +x /bin/changedate
 
-	cp $PWD/bin/deleteuser /bin/deleteuser
-	chmod +x /bin/deleteuser
+	# cp $PWD/bin/deleteuser /bin/deleteuser
+	# chmod +x /bin/deleteuser
 
-	cp $PWD/bin/sshlimiter /bin/sshlimiter
-	chmod +x /bin/sshlimiter
+	# cp $PWD/bin/sshlimiter /bin/sshlimiter
+	# chmod +x /bin/sshlimiter
 
-	cp $PWD/bin/changelimit /bin/changelimit
-	chmod +x /bin/changelimit
+	# cp $PWD/bin/changelimit /bin/changelimit
+	# chmod +x /bin/changelimit
 
-	cp $PWD/bin/vpshelp /bin/vpshelp
-	chmod +x /bin/vpshelp
+	# cp $PWD/bin/vpshelp /bin/vpshelp
+	# chmod +x /bin/vpshelp
 
-	cp $PWD/bin/sshmonitor /bin/sshmonitor
-	chmod +x /bin/sshmonitor
+	# cp $PWD/bin/sshmonitor /bin/sshmonitor
+	# chmod +x /bin/sshmonitor
 
-	 echo '******* INSTALLING BIN'
+}
+
+DELETE_BIN(){
+	ls $PWD/bin | while read var; do rm /bin/$var; done
 }
 
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "VPS Manager 2.0.1" ; tput sgr0
@@ -108,8 +111,9 @@ tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Wait for automatic set
 sleep 3
 apt-get update -y
 apt-get upgrade -y
-rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/listar /bin/sshmonitor /bin/ajuda > /dev/null
-rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh > /dev/null
+
+DELETE_BIN
+
 apt-get install squid3 bc screen nano unzip dos2unix wget -y
 killall apache2
 apt-get purge apache2 -y
