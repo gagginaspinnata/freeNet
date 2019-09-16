@@ -133,7 +133,10 @@ apt-get upgrade -y
 
 DELETE_BIN
 
+# Installing required software
 apt-get install squid3 bc screen nano unzip dos2unix wget -y
+
+# Removing apache2
 killall apache2
 apt-get purge apache2 -y
 if [ -f "/usr/sbin/ufw" ]; then
