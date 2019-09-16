@@ -2,6 +2,7 @@
 
  INSTALL_BIN(){
 
+	 echo '******* INSTALLING BIN'
 	 
 	cp $PWD/bin/addhost /bin/addhost
 	chmod +x /bin/addhost
@@ -35,6 +36,8 @@
 
 	cp $PWD/bin/sshmonitor /bin/sshmonitor
 	chmod +x /bin/sshmonitor
+
+	 echo '******* INSTALLING BIN'
 }
 
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "VPS Manager 2.0.1" ; tput sgr0
