@@ -2,37 +2,38 @@
 
  INSTALL_BIN(){
 
-	cp bin/addhost /bin/addhost
+	 
+	cp $PWD/bin/addhost /bin/addhost
 	chmod +x /bin/addhost
 
-	cp bin/changeuserpassword /bin/changeuserpassword
+	cp $PWD/bin/changeuserpassword /bin/changeuserpassword
 	chmod +x /bin/changeuserpassword
 
-	cp bin/newuser /bin/newuser
+	cp $PWD/bin/newuser /bin/newuser
 	chmod +x /bin/newuser
 
-	cp bin/deletehost /bin/deletehost
+	cp $PWD/bin/deletehost /bin/deletehost
 	chmod +x /bin/deletehost
 
-	cp bin/expcleaner /bin/expcleaner
+	cp $PWD/bin/expcleaner /bin/expcleaner
 	chmod +x /bin/expcleaner
 
-	cp bin/changedate /bin/changedate
+	cp $PWD/bin/changedate /bin/changedate
 	chmod +x /bin/changedate
 
-	cp bin/deleteuser /bin/deleteuser
+	cp $PWD/bin/deleteuser /bin/deleteuser
 	chmod +x /bin/deleteuser
 
-	cp bin/sshlimiter /bin/sshlimiter
+	cp $PWD/bin/sshlimiter /bin/sshlimiter
 	chmod +x /bin/sshlimiter
 
-	cp bin/changelimit /bin/changelimit
+	cp $PWD/bin/changelimit /bin/changelimit
 	chmod +x /bin/changelimit
 
-	cp bin/vpshelp /bin/vpshelp
+	cp $PWD/bin/vpshelp /bin/vpshelp
 	chmod +x /bin/vpshelp
 
-	cp bin/sshmonitor /bin/sshmonitor
+	cp $PWD/bin/sshmonitor /bin/sshmonitor
 	chmod +x /bin/sshmonitor
 }
 
