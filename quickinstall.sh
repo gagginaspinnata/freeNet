@@ -21,7 +21,7 @@ say() {
 
 IP=$(wget -qO- ipv4.icanhazip.com)
 
-say 'Configuring $(IP) as esternal ip.' 2
+say "Configuring $(IP) as esternal ip." 2
 
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/users.db
 
