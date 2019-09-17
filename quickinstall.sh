@@ -128,4 +128,3 @@ tput sgr0
 echo ""
 
 grep -v "^Compression yes" /etc/ssh/sshd_config >/tmp/sshcp && mv /tmp/sshcp /etc/ssh/sshd_config
-exit 1
