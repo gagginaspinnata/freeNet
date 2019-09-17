@@ -34,8 +34,12 @@ apt-get upgrade -y
 # DELETE_BIN
 
 # Installing required software
-say 'Installing squid3, bc, screen, nano, unzip, dos2unix, wget' 2
+say 'Installing squid3, bc, screen, nano, unzip, dos2unix, wget, git' 2
 apt-get install squid3 bc screen nano unzip dos2unix wget -y
+
+git clone https://github.com/gagginaspinnata/freeNet.git /home
+
+cd home/freeNet
 
 # Removing apache2
 say 'Removing apache2' 2
