@@ -92,32 +92,16 @@ if [ -d "/etc/squid/" ]; then
         /etc/init.d/ssh reload >/dev/null
     fi
 fi
-echo ""
-tput setaf 7
-tput setab 4
-tput bold
+
 echo "Squid Proxy Installed and running on ports: 80, 3128, 8080 e 8799. First try 8080 on your client."
-tput sgr0
-tput setaf 7
-tput setab 4
-tput bold
+
 echo "OpenSSH running on ports 22 e 443. First try 443 on your client."
-tput sgr0
-tput setaf 7
-tput setab 4
-tput bold
+
 echo "User management scripts installed"
-tput sgr0
-tput setaf 7
-tput setab 4
-tput bold
+
 echo "Read the documentation to avoid questions and problems.!"
-tput sgr0
-tput setaf 7
-tput setab 4
-tput bold
+
 echo "To see the available commands use the command: vpshelp"
-tput sgr0
 echo ""
 
 grep -v "^Compression yes" /etc/ssh/sshd_config >/tmp/sshcp && mv /tmp/sshcp /etc/ssh/sshd_config
