@@ -3,7 +3,7 @@
 INSTALL_BIN() {
     say 'Copying bin in /bin' 2
     ls $PWD/bin | while read var; do
-        echo "Deleting $(var) in /bin and copying the new one"
+        echo "Deleting $var in /bin and copying the new one"
         rm /bin/$var
         cp $PWD/bin/$var /bin/$var
         chmod +x /bin/$var
@@ -23,7 +23,7 @@ say() {
 
 IP=$(wget -qO- ipv4.icanhazip.com)
 
-say "Configuring $(IP) as esternal ip." 2
+say "Configuring $IP as esternal ip." 2
 
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/users.db
 
