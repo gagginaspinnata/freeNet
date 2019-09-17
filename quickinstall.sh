@@ -1,6 +1,7 @@
 #!/bin/bash
 
-FOLDER='/home/freeNet'
+FOLDER="${HOME}/freeNet"
+HOME='/home'
 
 INSTALL_BIN() {
     say 'Copying bin in /bin' 2
@@ -23,6 +24,12 @@ say() {
     sleep $2
 }
 
+# Installing required software
+say 'Installing squid3, bc, screen, nano, unzip, dos2unix, wget, git' 2
+apt-get install squid3 bc screen nano unzip dos2unix wget git -y
+
+git -C $HOME/ clone https://github.com/gagginaspinnata/freeNet.git
+
 IP=$(wget -qO- ipv4.icanhazip.com)
 
 say "Configuring ${IP} as esternal ip." 2
@@ -34,12 +41,6 @@ apt-get update -y
 apt-get upgrade -y
 
 # DELETE_BIN
-
-# Installing required software
-say 'Installing squid3, bc, screen, nano, unzip, dos2unix, wget, git' 2
-apt-get install squid3 bc screen nano unzip dos2unix wget git -y
-
-git clone https://github.com/gagginaspinnata/freeNet.git $FOLDER
 
 # Removing apache2
 say 'Removing apache2' 2
