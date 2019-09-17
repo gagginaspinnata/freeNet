@@ -1,11 +1,13 @@
 #!/bin/bash
 
+FOLDER='/home/freeNet'
+
 INSTALL_BIN() {
     say 'Copying bin in /bin' 2
-    ls $PWD/bin | while read var; do
-        echo "Deleting $var in /bin and copying the new one"
+    ls $FOLDER/bin | while read var; do
+        echo "Deleting ${var} in /bin and copying the new one"
         rm /bin/$var
-        cp $PWD/bin/$var /bin/$var
+        cp $FOLDER/bin/$var /bin/$var
         chmod +x /bin/$var
     done
 }
@@ -23,7 +25,7 @@ say() {
 
 IP=$(wget -qO- ipv4.icanhazip.com)
 
-say "Configuring $IP as esternal ip." 2
+say "Configuring ${IP} as esternal ip." 2
 
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/users.db
 
@@ -38,8 +40,6 @@ say 'Installing squid3, bc, screen, nano, unzip, dos2unix, wget, git' 2
 apt-get install squid3 bc screen nano unzip dos2unix wget git -y
 
 git clone https://github.com/gagginaspinnata/freeNet.git /home
-
-cd /home/freeNet
 
 # Removing apache2
 say 'Removing apache2' 2
