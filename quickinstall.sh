@@ -12,7 +12,7 @@ DELETE_BIN() {
     ls $PWD/bin | while read var; do rm /bin/$var; done
 }
 
-function say() {
+say() {
 
     clear
     echo $1
