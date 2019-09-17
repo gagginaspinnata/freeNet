@@ -99,7 +99,7 @@ if [ -z "$ipdovps" ]; then
 	tput sgr0
 	exit 1
 fi
-if [ -f "/root/usuarios.db" ]; then
+if [ -f "/root/users.db" ]; then
 	tput setaf 6
 	tput bold
 	echo ""
@@ -115,7 +115,7 @@ if [ -f "/root/usuarios.db" ]; then
 	tput sgr0
 	read -p "Option ?:" -e -i 1 optiondb
 else
-	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/usuarios.db
+	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/users.db
 fi
 echo ""
 read -p "Do you want to enable SSH compression (may increase RAM consumption)? [y / n]) " -e -i n sshcompression
@@ -224,7 +224,7 @@ echo "To see the available commands use the command: vpshelp"
 tput sgr0
 echo ""
 if [[ "$optiondb" == '2' ]]; then
-	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/usuarios.db
+	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/users.db
 fi
 if [[ "$sshcompression" == 's' ]]; then
 	grep -v "^Compression yes" /etc/ssh/sshd_config >/tmp/sshcp && mv /tmp/sshcp /etc/ssh/sshd_config
