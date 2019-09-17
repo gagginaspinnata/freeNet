@@ -39,7 +39,7 @@ apt-get upgrade -y
 say 'Installing squid3, bc, screen, nano, unzip, dos2unix, wget, git' 2
 apt-get install squid3 bc screen nano unzip dos2unix wget git -y
 
-git clone https://github.com/gagginaspinnata/freeNet.git /home
+git clone https://github.com/gagginaspinnata/freeNet.git $FOLDER
 
 # Removing apache2
 say 'Removing apache2' 2
