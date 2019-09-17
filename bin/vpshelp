@@ -1,4 +1,14 @@
 #!/bin/bash
+
+IP=$(wget -qO- ipv4.icanhazip.com)
+
+tput setaf 7
+tput setab 4
+tput bold
+printf "The ip of your server is ${IP}"
+tput sgr0
+echo ""
+tput setaf 2
 tput setaf 7
 tput setab 4
 tput bold
