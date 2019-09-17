@@ -1,7 +1,10 @@
 #!/bin/bash
 
 INSTALL_BIN() {
+    say 'Copying bin in /bin' 2
     ls $PWD/bin | while read var; do
+        echo "Deleting $(var) in /bin and copying the new one"
+        rm /bin/$var
         cp $PWD/bin/$var /bin/$var
         chmod +x /bin/$var
     done
@@ -20,18 +23,22 @@ say() {
 
 IP=$(wget -qO- ipv4.icanhazip.com)
 
+say "Configuring $(IP) as esternal ip." 2
+
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/users.db
 
+say 'Updating and upgrading sources' 2
 apt-get update -y
 apt-get upgrade -y
 
-DELETE_BIN
+# DELETE_BIN
 
 # Installing required software
 say 'Installing squid3, bc, screen, nano, unzip, dos2unix, wget' 2
 apt-get install squid3 bc screen nano unzip dos2unix wget -y
 
 # Removing apache2
+say 'Removing apache2' 2
 killall apache2
 apt-get purge apache2 -y
 if [ -f "/usr/sbin/ufw" ]; then
@@ -42,6 +49,7 @@ if [ -f "/usr/sbin/ufw" ]; then
     ufw allow 8080/tcp
 fi
 
+say 'Configuring squid' 2
 if [ -d "/etc/squid3/" ]; then
     wget http://phreaker56.obex.pw/vpsmanager/squid1.txt -O /tmp/sqd1
     echo "acl url3 dstdomain -i $ipdovps" >/tmp/sqd2
@@ -92,15 +100,11 @@ if [ -d "/etc/squid/" ]; then
         /etc/init.d/ssh reload >/dev/null
     fi
 fi
-
+echo ""
 echo "Squid Proxy Installed and running on ports: 80, 3128, 8080 e 8799. First try 8080 on your client."
-
 echo "OpenSSH running on ports 22 e 443. First try 443 on your client."
-
 echo "User management scripts installed"
-
 echo "Read the documentation to avoid questions and problems.!"
-
 echo "To see the available commands use the command: vpshelp"
 echo ""
 
