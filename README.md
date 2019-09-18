@@ -1,6 +1,6 @@
 # Quick Install
 
-**It installs with default configuration**
+**install with default configuration**
 
 Install curls and then
 
