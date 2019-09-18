@@ -1,4 +1,4 @@
-# Quick Install
+# Quick Install for UBUNTU
 
 **install with default configuration**
 
@@ -6,7 +6,7 @@ Install curls and then
 
 `curl -s https://raw.githubusercontent.com/gagginaspinnata/freeNet/master/quickinstall.sh | bash`
 
-# Install with configuration
+# Install with configuration for UBUNTU
 
 **Run the commands below and follow the instruction on screen**
 
