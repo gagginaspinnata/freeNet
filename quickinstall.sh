@@ -62,8 +62,8 @@ if [ -d "/etc/squid3/" ]; then
     cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 >/etc/squid3/squid.conf
     wget http://phreaker56.obex.pw/vpsmanager/payload.txt -O /etc/squid3/payload.txt
     echo " " >>/etc/squid3/payload.txt
-    grep -v "^Port 443" /etc/ssh/sshd_config >/tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
-    echo "Port 443" >>/etc/ssh/sshd_config
+    # grep -v "^Port 443" /etc/ssh/sshd_config >/tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
+    # echo "Port 443" >>/etc/ssh/sshd_config
     grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
     echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 
@@ -87,8 +87,8 @@ if [ -d "/etc/squid/" ]; then
     cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 >/etc/squid/squid.conf
     wget http://phreaker56.obex.pw/vpsmanager/payload.txt -O /etc/squid/payload.txt
     echo " " >>/etc/squid/payload.txt
-    grep -v "^Port 443" /etc/ssh/sshd_config >/tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
-    echo "Port 443" >>/etc/ssh/sshd_config
+    # grep -v "^Port 443" /etc/ssh/sshd_config >/tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
+    # echo "Port 443" >>/etc/ssh/sshd_config
     grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
     echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 
