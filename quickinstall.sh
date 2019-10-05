@@ -24,7 +24,7 @@ say() {
 }
 
 # Installing required software
-apt-get install squid3 bc screen nano unzip dos2unix wget git -y
+sudo apt-get install squid3 bc screen nano unzip dos2unix wget git -y
 
 git -C $HOME/ clone https://github.com/gagginaspinnata/freeNet.git
 
@@ -33,14 +33,12 @@ IP=$(wget -qO- ipv4.icanhazip.com)
 
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' >/root/users.db
 
-apt-get update -y
-apt-get upgrade -y
 
 # DELETE_BIN
 
 # Removing apache2
 killall apache2
-apt-get purge apache2 -y
+sudo apt-get purge apache2 -y
 if [ -f "/usr/sbin/ufw" ]; then
     ufw allow 443/tcp
     ufw allow 80/tcp
