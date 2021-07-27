@@ -56,11 +56,18 @@ fi
 
 say 'Configuring squid' 2
 if [ -d "/etc/squid3/" ]; then
-    wget http://phreaker56.obex.pw/vpsmanager/squid1.txt -O /tmp/sqd1
+    #wget http://phreaker56.obex.pw/vpsmanager/squid1.txt -O /tmp/sqd1
+    cp ${FOLDER}/config/squid1.txt /tmp/sqd1
+
     echo "acl url3 dstdomain -i $ipdovps" >/tmp/sqd2
-    wget http://phreaker56.obex.pw/vpsmanager/squid2.txt -O /tmp/sqd3
+
+    #wget http://phreaker56.obex.pw/vpsmanager/squid2.txt -O /tmp/sqd3
+    p ${FOLDER}/config/squid2.txt /tmp/sqd3
+
     cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 >/etc/squid3/squid.conf
-    wget http://phreaker56.obex.pw/vpsmanager/payload.txt -O /etc/squid3/payload.txt
+
+    #wget http://phreaker56.obex.pw/vpsmanager/payload.txt -O /etc/squid3/payload.txt
+    cp ${FOLDER}/config/payload.txt /etc/squid3/payload.txt
     echo " " >>/etc/squid3/payload.txt
     grep -v "^Port 443" /etc/ssh/sshd_config >/tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
     echo "Port 443" >>/etc/ssh/sshd_config
@@ -81,11 +88,19 @@ if [ -d "/etc/squid3/" ]; then
     fi
 fi
 if [ -d "/etc/squid/" ]; then
-    wget http://phreaker56.obex.pw/vpsmanager/squid1.txt -O /tmp/sqd1
+    #wget http://phreaker56.obex.pw/vpsmanager/squid1.txt -O /tmp/sqd1
+    cp ${FOLDER}/config/squid1.txt /tmp/sqd1
+
     echo "acl url3 dstdomain -i $ipdovps" >/tmp/sqd2
-    wget http://phreaker56.obex.pw/vpsmanager/squid.txt -O /tmp/sqd3
+
+    #wget http://phreaker56.obex.pw/vpsmanager/squid.txt -O /tmp/sqd3
+    cp ${FOLDER}/config/squid.txt /tmp/sqd3
+
     cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 >/etc/squid/squid.conf
-    wget http://phreaker56.obex.pw/vpsmanager/payload.txt -O /etc/squid/payload.txt
+
+    #wget http://phreaker56.obex.pw/vpsmanager/payload.txt -O /etc/squid/payload.txt
+    cp ${FOLDER}/config/payload.txt /etc/squid/payload.txt
+
     echo " " >>/etc/squid/payload.txt
     grep -v "^Port 443" /etc/ssh/sshd_config >/tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
     echo "Port 443" >>/etc/ssh/sshd_config
