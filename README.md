@@ -17,3 +17,7 @@ First Clone the repo, then
 Cd into the directory `cd freeNet` and run `bash install.sh`
 
 To view the new installed commands run `vpshelp`
+
+
+L'esigenza di utilizzare una vpn o un tunnel ssh nasce dal fatto che android non permette di utilizzare un proxy con le connessioni mobili.
+L'idea di base è di instradare tutto il traffico verso un proprio server tramite una vpn o un tunnel ssh. Il traffico arrivato al server viene girato su un proxy (squid) che, prima di far partire le richieste verso l'esterno, modifica gli header http facendo credere al gestore di stare navigando su un loro dominio.
